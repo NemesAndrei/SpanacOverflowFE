@@ -1,0 +1,16 @@
+.question-card {
+  height: 300px;
+  border: 20px;
+  padding-right: 8px;
+  width: 1170px;
+  margin-bottom: 50px;
+  float: left;
+  word-break: break-all;
+}
+
+.mat-card-content {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 100px;
+}

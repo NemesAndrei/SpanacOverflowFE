@@ -1,0 +1,51 @@
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+</head>
+<header>  <app-navbar></app-navbar></header>
+<body>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Detail</th>
+      <th scope="col">User Information</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Username</th>
+      <td>
+        {{user.username}}
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Name</th>
+      <td>
+        {{user.name}}
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Score</th>
+      <td>
+        {{user.score}}
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">Role</th>
+      <td>
+        {{user.role}}
+      </td>
+    </tr>
+  </tbody>
+</table>
+<div class="col-md-1">
+  <button type="button" [routerLink]="['/profile/questions/']" class="btn btn-primary">My Questions</button>
+</div>
+<div class="col-md-1">
+  <button type="button" [routerLink]="['/profile/answers/']" class="btn btn-primary">My Answers</button>
+</div>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+

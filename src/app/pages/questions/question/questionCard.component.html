@@ -1,0 +1,22 @@
+<mat-card class="question-card">
+  <mat-card-subtitle>Author: {{question.user.name}}/Score: {{question.user.score}}</mat-card-subtitle>
+  <mat-card-title><a [routerLink]="['/questions/',question.id]">{{question.title}}</a></mat-card-title>
+  <mat-card-content>
+    <p>
+      Question Votes:{{question.votes}}
+      <br>
+      Created: {{question.created}}
+    </p>
+    <mat-divider inset></mat-divider>
+    <p >{{question.body}}</p>
+  </mat-card-content>
+  <mat-divider inset></mat-divider>
+  <mat-card-actions>
+    Tags:
+    <button *ngFor="let tag of question.tags" >
+      <a [routerLink]="['/questions/tag/',tag.name]">{{tag.name}}</a>
+    </button>
+  </mat-card-actions>
+  <mat-card-footer>
+  </mat-card-footer>
+</mat-card>

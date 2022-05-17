@@ -1,0 +1,13 @@
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+</head>
+<header>  <app-navbar></app-navbar></header>
+<body>
+<div class="container" *ngIf="ricardo">
+<img src="assets/ricardo.gif">
+</div>
+<div class="container">
+  <question-card *ngFor="let question of questions" [question]="question"></question-card>
+</div>
+</body>

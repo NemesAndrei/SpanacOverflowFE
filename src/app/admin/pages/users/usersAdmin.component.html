@@ -1,0 +1,46 @@
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+</head>
+<header>  <admin-nav></admin-nav></header>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Questions</h3>
+        </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <table class="table table-striped table-bordered">
+                <thead>
+                <tr>
+                  <th>User Name</th>
+                  <th>Username</th>
+                  <td>User Score</td>
+                  <td>User Role</td>
+                  <td>Banned</td>
+                  <th>Ban User</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let user of users">
+                  <td>{{user.name}}</td>
+                  <td>{{user.username}}</td>
+                  <td>{{user.score}}</td>
+                  <td>{{user.role}}</td>
+                  <td>{{user.isBanned}}</td>
+                  <td><button class="btn btn-danger" (click)="banUser(user)">BAN</button></td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>

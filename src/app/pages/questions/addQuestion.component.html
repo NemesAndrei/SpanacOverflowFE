@@ -1,0 +1,25 @@
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+</head>
+<header>  <app-navbar></app-navbar></header>
+<body>
+<form #addQuestionForm="ngForm"   (ngSubmit)="addQuestion(addQuestionForm.value)">
+  <div class="form-group">
+    <label for="title">Title:</label>
+    <textarea class="form-control" (ngModel)="title" name="title"  rows="5" id="title" placeholder="Enter Title"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="body">Body:</label>
+    <textarea class="form-control" (ngModel)="body" name="body"  rows="5" id="body" placeholder="Enter Body"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="tags">Tags:</label>
+    <textarea class="form-control" (ngModel)="tags" name="tags"  rows="5" id="tags" placeholder="Enter Tags separated by comma"></textarea>
+  </div>
+  <button class="btn btn-default" >
+    Submit Question
+  </button>
+</form>
+
+</body>

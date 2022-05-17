@@ -1,0 +1,32 @@
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+</head>
+<header>
+  <app-navbar></app-navbar>
+</header>
+<body>
+
+<p class="alert alert-success" *ngIf="alertMessage">{{alertMessage}}</p>
+<br>
+<div class="container">
+  <question-card [question]="question"></question-card>
+  <button mat-button (click)="like(question)">Like</button>
+  <button mat-button (click)="dislike(question)">Dislike</button>
+  <br>
+  <br>
+  <form id="addAnswerForm"  (submit)="submitAnswer()">
+    <div class="form-group">
+      <label for="body">Answer:</label>
+      <textarea class="form-control" [(ngModel)]="body" [ngModelOptions]="{standalone:true}" rows="5" id="body" placeholder="Enter Answer"></textarea>
+    </div>
+    <button class="btn btn-default" >
+      Submit Answer
+    </button>
+  </form>
+
+  <br>
+  <br>
+  <answer-card *ngFor="let answer of question.answerSet" [answer]="answer"></answer-card>
+</div>
+</body>
